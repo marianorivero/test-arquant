@@ -1,7 +1,7 @@
 import './Loading.css'
 
 function Loading() {
-    return <div class="ring">Loading
+    return <div className="ring">Loading
     <span></span>
   </div>
 }
