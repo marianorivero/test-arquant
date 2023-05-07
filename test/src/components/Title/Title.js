@@ -1,4 +1,5 @@
-import './Title.css'
+import React from 'react'
+import '../../styles/Title.css'
 
 function Title() {
     return <section className='title'>

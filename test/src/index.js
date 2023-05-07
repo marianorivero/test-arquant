@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Title from "./Title";
+import Title from "./components/Title/Title";
 import App from './App'
 import './index.css'
 
