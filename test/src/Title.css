@@ -1,0 +1,10 @@
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: double;
+
+    font-family: 'Star Wars', sans-serif;
+    color: rgb(241, 245, 16);
+}
