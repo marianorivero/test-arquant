@@ -1,18 +1,20 @@
 import { useEffect, useState } from 'react'
+import Loading from './Loading'
 import './App.css'
 
 
 function App() {
 
     const [people, setPeople] = useState([])
-
+    const [status, setStatus] = useState(false)
 
     useEffect(() => {
         async function getData() {
             const response = await fetch('https://swapi.dev/api/people/');
             const data = await response.json()
             setPeople(data.results);
-        }
+            setStatus(true);
+        };
 
         getData();
     }, [])
@@ -24,7 +26,7 @@ function App() {
 
 
     return <>
-        {
+        {status ?
             people.map( person => {
                 return (
                     <div key={person.name} className='container'>
@@ -34,9 +36,10 @@ function App() {
                         <button onClick={() => deletePerson(person.name)} className='btn btn1'>  Eliminar  </button>
                     </div>
                 )
-            })
+            }):<Loading/>
         }
     </>
 }
 
 export default App;
+
